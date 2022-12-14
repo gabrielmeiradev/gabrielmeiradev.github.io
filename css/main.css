@@ -211,14 +211,13 @@ ul li::before {
     section{
         scroll-margin-top: 60px;
     }
+    
     footer > .container > img{
         height: 20px;
     }
-
-
-    .footer-links {
-        gap: 10px !important;
-        font-size: .8rem;
+    
+    .made-with {
+        font-size: .7rem;
     }
 }
 
