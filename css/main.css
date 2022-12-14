@@ -149,74 +149,6 @@ ul li::before {
     flex-direction: row;
 }
 
-@media screen and (max-width: 800px) {
-    .desktop-only {
-        display: none !important;
-    }
-
-    #trailer {
-        display: none !important;
-    }
-
-    .mobile-only {
-        display: inherit !important;
-    }
-
-    .welcome {
-        font-size: 2.3rem !important;
-    }
-
-    .main-padding {
-        padding: 25px 20px;
-    }
-
-    .flex-mobile {
-        flex-direction: column;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-content-desc {
-        width: 100% !important;
-    }
-
-    .about-content-grid {
-        flex-direction: column;
-        margin-left: 0 !important;
-    }
-
-    .tech-skills-cards>.row-skills {
-        flex-direction: column;
-    }
-
-    .tech-skill-card {
-        opacity: .3;
-    }
-
-    .highlight {
-        opacity: 1;
-    }
-
-    .case {
-        display: flex !important;
-        flex-direction: column;
-    }
-
-    section {
-        scroll-margin-top: 60px;
-    }
-
-    footer>.container>img {
-        height: 25px;
-    }
-
-    .made-with {
-        font-size: .7rem;
-    }
-}
-
 .tech-skills-cards {
     display: flex;
     flex-direction: column;
@@ -301,5 +233,73 @@ ul li::before {
 
     .main-padding {
         padding: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    #trailer {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: inherit !important;
+    }
+
+    .welcome {
+        font-size: 2.3rem !important;
+    }
+
+    .main-padding {
+        padding: 25px 20px;
+    }
+
+    .flex-mobile {
+        flex-direction: column;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content-desc {
+        width: 100% !important;
+    }
+
+    .about-content-grid {
+        flex-direction: column;
+        margin-left: 0 !important;
+    }
+
+    .tech-skills-cards>.row-skills {
+        flex-direction: column;
+    }
+
+    .tech-skill-card {
+        opacity: .3;
+    }
+
+    .highlight {
+        opacity: 1;
+    }
+
+    .case {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    section {
+        scroll-margin-top: 60px;
+    }
+
+    footer>.container>img {
+        height: 25px;
+    }
+
+    .made-with {
+        font-size: .7rem;
     }
 }
