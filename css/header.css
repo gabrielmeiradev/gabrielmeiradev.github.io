@@ -1,0 +1,25 @@
+.main-banner{
+    background-image: url('../images/assets/bg-tiles.png');
+    background-size: cover;
+    padding: 25vh 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.welcome{
+    font-weight: 400;
+    margin: 20px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.skills-badges{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
