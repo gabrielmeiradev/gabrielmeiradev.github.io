@@ -144,6 +144,10 @@ ul li::before {
     top: 3px;
 }
 
+.link-pink {
+    color: var(--main-pink) !important;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -241,7 +245,7 @@ ul li::before {
         display: none !important;
     }
 
-    .case-desc{
+    .case-desc {
         width: 100% !important;
     }
 
