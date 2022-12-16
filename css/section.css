@@ -81,16 +81,14 @@
     gap: 25px;
 }
 
-
 .case{
+    padding: 40px;
     background-size: cover;
-    box-sizing: border-box;
-    padding: 9vmin 5vmin;
-    border-radius: 4px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     transition: .2s ease;
+    box-sizing: border-box;
+    transform: translate(0px, 0px);
 }
+
 
 .case:hover{
     transform: translate(4px, -4px);
@@ -100,16 +98,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0F0E0E;
+    background: #1a1818;
     color: #909090;
 }
 
-.case.michele-cortinas{
-    background-image: url('../images/cases-covers/mc.png');
+.see-case{
+    border: #ffffff solid 1px;
+    padding: 10px 20px;
+    transition: ease .2s;
+    display: inline-block;
 }
+
+.see-case:hover{
+    background: #ffffff;
+    color: #1a1818;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
 .case-desc{
     font-size: 2rem;
+    margin-top: 20vmin;
+    width: 50%;
 }
 
 .case-brand {
@@ -119,8 +139,8 @@
 }
 
 .case-brand h1{
-    font-weight: 300;
-    font-size: 1.5em;
+    font-weight: 700;
+    font-size: 1.3em;
 }
 
 .case-brand img{

@@ -241,6 +241,10 @@ ul li::before {
         display: none !important;
     }
 
+    .case-desc{
+        width: 100% !important;
+    }
+
     #trailer {
         display: none !important;
     }
