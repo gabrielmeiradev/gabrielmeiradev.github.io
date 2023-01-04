@@ -109,7 +109,7 @@
 
 .repository-owner{
     border-radius: 50%;
-    height: 50px;
+    height: 35px;
 }
 
 .repository-desc{
@@ -141,7 +141,16 @@
 }
 
 @media screen and (max-width: 700px){
-    .repository-desc{
+    .repository-desc, .repository-title{
         width: 80%;
-    }    
+    }   
+
+    .repository-title{
+        font-size: .8rem;
+    }
+
+    .repository-title .fa-github{
+        display: none;
+    }
+    
 }
