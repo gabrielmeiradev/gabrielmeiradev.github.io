@@ -33,13 +33,19 @@
         <div class="menu-container menu-desktop desktop-only">
             <a href="#sobre-mim" class="menu-sobre-mim">sobre mim</a>
             <a href="#tech-skills" class="menu-tech-skills">tech skills</a>
-            <a href="#meus-trabalhos" class="menu-meus-trabalhos">meus trabalhos</a>
+            <a href="#github-repositories" class="menu-repositorios-do-github">repositórios</a>
         </div>
         <div class="action-buttons-container desktop-only">
             <a href="https://github.com/gabrielmeiradev" class="interactable" target="_blank" data-type="link">
                 <div class="action-button icon-labeled">
-                    <img src="images/icons/github.svg">
-                    <p>github</p>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>LinkedIn</p>
+                </div>
+            </a>
+            <a href="https://github.com/gabrielmeiradev" class="interactable" target="_blank" data-type="link">
+                <div class="action-button icon-labeled">
+                    <i class="fa-brands fa-github"></i>
+                    <p>Github</p>
                 </div>
             </a>
             <img src="images/assets/line.svg">
@@ -63,8 +69,12 @@
             <div class="action-buttons-container mobile">
                 <a href="https://github.com/povyouareme" target="_blank">
                     <div class="action-button icon-labeled">
-                        <img src="images/icons/github.svg">
-                        <p>github</p>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>LinkedIn</p>
+                    </div>
+                    <div class="action-button icon-labeled">
+                        <i class="fa-brands fa-github"></i>
+                        <p>Github</p>
                     </div>
                 </a>
                 <button data-tf-popup="G62tUVnv" data-tf-iframe-props="title=Portfolio" data-tf-medium="snippet"
@@ -211,32 +221,15 @@
         </div>
     </section>
 
-    <section id="meus-trabalhos" class="about-section main-padding interactable" data-type="works">
+    <section id="github-repositories" class="repositorios-do-github about-section main-padding interactable">
         <div class="section-title">
             <div class="section-title-content">
-                <h1 class="section-info-title">meus trabalhos</h1>
-                <p class="section-info-tags">#meus-trabalhos .section-title</p>
+                <h1 class="section-info-title">repositórios do github</h1>
+                <p class="section-info-tags">#github-repositories .section-title</p>
             </div>
         </div>
-        <div class="cases">
-            <div class="case michele-cortinas">
-                <video id="background-video" autoplay loop muted poster="images/cases-covers/mc.png">
-                    <source src="images/cases-covers/mc.mp4" type="video/mp4">
-                </video>
-                <div class="case-brand">
-                    <img src="images/cases-logos/logo-branco.png">
-                    <h1>Michele Cortinas</h1>
-                </div>
-                <div class="container">
-                    <p class="case-desc">Construindo uma nova experiência em navegação e
-                        catálogo digital customizado.</p>
-                    <a href="https://michelecortinas.com.br" target="_blank" class="link interactable see-case"
-                        data-type="link">Ver case</a>
-                </div>
-            </div>
-            <div class="case comming-soon">
-                <h1>Mais projetos no meu <a href="https://github.com/gabrielmeiradev" target="_blank" class="link-pink"> <i class="fa fa-github" aria-hidden="true"></i> Github</a></h1>
-            </div>
+        <div class="repositories" id="repositories">
+        
         </div>
     </section>
 
@@ -250,6 +243,7 @@
     <script src="js/scroll-section.js"></script>
     <script src="js/trail.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/github.js"></script>
 </body>
 
 </html>

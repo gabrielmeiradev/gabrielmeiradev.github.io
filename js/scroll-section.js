@@ -23,24 +23,33 @@ const scrollHandlerCards = () => {
     document.querySelector(techCards[getMinDistanceElement(techCards, 150)]).classList.add('highlight');
 }
 
+let lastElement
+
 const scrollHandlerMenu = () => {
     let menuOptions = [
         '.menu-sobre-mim',
         '.menu-tech-skills',
-        '.menu-meus-trabalhos',
+        '.menu-repositorios-do-github',
     ];
 
     let sections = [
         '#sobre-mim',
         '#tech-skills',
-        '#meus-trabalhos',
+        '#github-repositories',
     ]
 
-    menuOptions.forEach(menuOption => {
+    menuOptions.forEach((menuOption, index) => {
         document.querySelector(menuOption).classList.remove('active');
     })
 
-    document.querySelector(menuOptions[getMinDistanceElement(sections, 0)]).classList.add('active');
+    if(lastElement && lastElement.classList.contains('menu-repositorios-do-github')){
+        lastElement.classList.add('active');
+    }
+    
+    let currentElement = document.querySelector(menuOptions[getMinDistanceElement(sections, 0)]);
+    currentElement.classList.add('active')
+
+    lastElement = currentElement;
 }
 
 window.addEventListener('scroll', scrollHandlerCards)

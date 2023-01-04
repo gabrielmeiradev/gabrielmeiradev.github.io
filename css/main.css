@@ -7,9 +7,9 @@ html {
 }
 
 :root {
-    --main-pink: #C41067;
-    --secondary-pink: #C51067;
     --main-black: #0B0B0C;
+    --secondary-pink: #C51067;
+    --main-pink: #C41067;
 
     --html-bg: #CB4900;
     --css-bg: #008ECB;

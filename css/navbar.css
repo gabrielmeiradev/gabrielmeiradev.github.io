@@ -63,6 +63,11 @@
     margin-top: 80px;
 }
 
+.action-button{
+    color: var(--main-pink);
+    font-size: 1.5rem;
+}
+
 .mobile-icon-menu-container{
     font-size: 1.4rem;
 }
@@ -85,10 +90,16 @@
 .action-buttons-container{
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .icon-labeled{
     display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon-labeled p{
     color: white;
-    gap: 20px
+    font-size: 1rem;
 }
