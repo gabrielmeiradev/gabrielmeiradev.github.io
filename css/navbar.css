@@ -15,6 +15,10 @@
     left: 0;
 }
 
+.logo-container {
+    z-index: 999;
+}
+
 .menu-desktop{
     display: flex;
     gap: 30px

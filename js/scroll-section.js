@@ -20,7 +20,9 @@ const scrollHandlerCards = () => {
         document.querySelector(techCard).classList.remove('highlight');
     })
 
-    document.querySelector(techCards[getMinDistanceElement(techCards, 150)]).classList.add('highlight');
+    let currentCard = document.querySelector(techCards[getMinDistanceElement(techCards, 150)])
+
+    if(currentCard) currentCard.classList.add('highlight');
 }
 
 let lastElement
@@ -47,7 +49,7 @@ const scrollHandlerMenu = () => {
     }
     
     let currentElement = document.querySelector(menuOptions[getMinDistanceElement(sections, 0)]);
-    currentElement.classList.add('active')
+    if (currentElement) currentElement.classList.add('active')
 
     lastElement = currentElement;
 }
