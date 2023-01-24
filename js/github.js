@@ -1,7 +1,7 @@
 const reposElement = document.querySelector('#repositories');
 
 async function getRepos(username) {
-    const response = await fetch(`https://api.github.com/users/${username}/repos`);
+    const response = await fetch(`https://api.github.com/users/${username}/repos?sort=created&direction=desc`);
     return response.json();
 }
 
