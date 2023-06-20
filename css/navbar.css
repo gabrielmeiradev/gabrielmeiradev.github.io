@@ -34,7 +34,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--main-black);
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(20px);
     z-index: 999;
     flex-direction: column;
     transition: .2s ease;
