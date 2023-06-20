@@ -36,6 +36,7 @@
     left: 0;
     background: rgba(0, 0, 0, .7);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     z-index: 999;
     flex-direction: column;
     transition: .2s ease;
