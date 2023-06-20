@@ -7,11 +7,11 @@ async function getRepos(username) {
 
 function appendRepo(title, desc, link) {
     let container = document.createElement('div');
-    container.classList.add('repository');
+    container.classList.add('repository',  'interactable');
     container.dataset.type = 'link'
     if(desc){
         container.innerHTML = 
-        `<div class="col">
+        `<div class="col" data-type="link">
             <a class="repository-title" href="${link}"><i class="fa-brands fa-github"></i><h2>${title}</h2></a>
             <p class="repository-desc">${desc}</p>
         </div>
@@ -21,7 +21,7 @@ function appendRepo(title, desc, link) {
         `
     } else {
         container.innerHTML = 
-        `<div class="col">
+        `<div class="col interactable" data-type="link">
             <a class="repository-title" href="${link}"><i class="fa-brands fa-github"></i><h2>${title}</h2></a>
         </div>
         <div class="col repository-owner-container">

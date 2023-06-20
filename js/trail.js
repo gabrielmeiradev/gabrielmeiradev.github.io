@@ -23,7 +23,7 @@ const getTrailerClass = type => {
     case "works":
       return "fa-solid fa-briefcase";
     case "link":
-      return "fa-solid fa-arrow-up-right"; 
+      return "fa-solid fa-link"; 
     default:
       return "fa-solid fa-arrow-up-right"; 
   }
