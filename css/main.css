@@ -244,6 +244,18 @@ ul li::before {
     justify-content: space-between;
 }
 
+.download-resume-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 2rem;
+    background-color: var(--secondary-pink);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 @media screen and (min-width: 800px) {
 
     .desktop-only {
