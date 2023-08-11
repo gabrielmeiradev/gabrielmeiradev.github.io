@@ -36,12 +36,15 @@ function appendRepo(title, desc, link) {
     reposElement.appendChild(container)
 }
 
+const projectsQuantityIndicator = document.querySelector('#projects-qnt-indicator'):
+
 function loadRepos(){
     getRepos('gabrielmeiradev').then((repositories) => {
         for(let repo of repositories){
             if(repo.name == 'gabrielmeiradev.github.io') repo.name = 'Esse portfólio'
             appendRepo(repo.name, repo.description, repo.html_url)                
         }
+        projectsQuantityIndicator.innerText = repositories.length;
     }).catch(err => console.log(err))
 }
 
