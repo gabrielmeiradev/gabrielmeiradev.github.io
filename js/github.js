@@ -36,17 +36,48 @@ function appendRepo(title, desc, link) {
     reposElement.appendChild(container)
 }
 
-const projectsQuantityIndicator = document.querySelector('#projects-qnt-indicator');
-
-function loadRepos(){
-    getRepos('gabrielmeiradev').then((repositories) => {
-        projectsQuantityIndicator.innerText = repositories.length;
-        for(let repo of repositories){
-            if(repo.name == 'gabrielmeiradev.github.io') repo.name = 'Esse portfólio'
-            appendRepo(repo.name, repo.description, repo.html_url)                
-        }
-        projectsQuantityIndicator.innerText = repositories.length;
-    }).catch(err => console.log(err))
+function cleanRepos() {
+    reposElement.innerHTML = '';
 }
 
-loadRepos();
+const projectsQuantityIndicator = document.querySelector('#projects-qnt-indicator');
+
+let repos = [];
+
+getRepos('gabrielmeiradev').then((repositories) => {
+    repositories.forEach(repo => {
+        repos.push(repo)
+    })
+    loadRepos();
+});
+
+function loadRepos(query){
+    cleanRepos();
+
+    reposFiltered = query ? repos.filter((repo) => 
+        repo.
+        name.
+        toLowerCase().
+        includes(query.toLowerCase())
+        || 
+        repo.description
+        && 
+        repo
+        .description
+        .toLowerCase()
+        .includes(query.toLowerCase())) 
+        : repos;
+    projectsQuantityIndicator.innerText = reposFiltered.length;
+
+    for(let repo of reposFiltered){
+        if(repo.name == 'gabrielmeiradev.github.io') repo.name = 'Esse portfólio'
+        appendRepo(repo.name, repo.description, repo.html_url)                
+    }
+}
+
+const searchBar = document.querySelector('#github-search-bar');
+
+searchBar.addEventListener('input', (e) => {
+    loadRepos(e.target.value);
+})
+

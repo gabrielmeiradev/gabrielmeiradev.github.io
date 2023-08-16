@@ -11,6 +11,8 @@ html {
     --secondary-pink: #C51067;
     --main-pink: #C41067;
 
+    --main-font: 'Montserrat', sans-serif;
+
     --html-bg: #CB4900;
     --css-bg: #008ECB;
     --js-bg: #FF9900;
@@ -53,9 +55,13 @@ html {
 
 body {
     background: var(--main-black);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--main-font);
     color: white;
     overflow-x: hidden;
+}
+
+input {
+    font-family: var(--main-font);
 }
 
 section {
