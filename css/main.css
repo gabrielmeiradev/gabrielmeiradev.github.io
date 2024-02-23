@@ -411,6 +411,11 @@ ul li::before {
         opacity: 1;
     }
 
+    .tech-skill-card.highlight::before {
+        left: 100%;
+    }
+    
+
     .case {
         display: flex !important;
         flex-direction: column;
