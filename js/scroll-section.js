@@ -1,21 +1,24 @@
-function getMinDistanceElement(arr, margin) {
-    let elements = arr.map(value => ((
+function getMinDistanceElement(arr) {
+    let elements = arr.map(value => (
+        (
         document.querySelector(value).getBoundingClientRect().top + 
-        document.querySelector(value).getBoundingClientRect().bottom) / 2) - margin);
+        document.querySelector(value).getBoundingClientRect().bottom
+        ) / 2) - 300);
     let activeElements = elements.filter(value => value > 0);
     return elements.indexOf(Math.min(...activeElements));
 }
 
-const scrollHandlerCards = () => {
-    let techCards = [
-        '.tech-skill-card.html',
-        '.tech-skill-card.css',
-        '.tech-skill-card.js',
-        '.tech-skill-card.nodejs',
-        '.tech-skill-card.php',
-        '.tech-skill-card.other'
-    ];
+const techCards = [
+    '.tech-skill-card.html',
+    '.tech-skill-card.css',
+    '.tech-skill-card.js',
+    '.tech-skill-card.nodejs',
+    '.tech-skill-card.php',
+    '.tech-skill-card.other'
+];
 
+const scrollHandlerCards = () => {
+   
     techCards.forEach(techCard => {
         document.querySelector(techCard).classList.remove('highlight');
     })
@@ -50,7 +53,7 @@ const scrollHandlerMenu = () => {
         lastElement.classList.add('active');
     }
     
-    let currentElement = document.querySelector(menuOptions[getMinDistanceElement(sections, 0)]);
+    let currentElement = document.querySelector(menuOptions[getMinDistanceElement(sections)]);
     if (currentElement) currentElement.classList.add('active')
 
     lastElement = currentElement;
