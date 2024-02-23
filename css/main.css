@@ -178,6 +178,12 @@ ul li::before {
     flex-direction: row;
 }
 
+.row-skills {
+    gap: 10px;
+    display: flex;
+    align-items: stretch;
+}
+
 .tech-skills-cards {
     display: flex;
     flex-direction: column;
@@ -185,18 +191,35 @@ ul li::before {
     margin-top: 25px;
 }
 
-.row-skills {
-    gap: 10px;
-    display: flex;
-    align-items: stretch;
-}
-
 .tech-skill-card {
-    border-radius: 6px;
     padding: 30px;
-    border-radius: 6px;
+    border-radius: 24px;
     border: 2px solid transparent;
     transition: .2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-skill-card::before {
+    content: '';
+    width: 20px;
+    height: 700px;
+    rotate: -30deg;
+    background: #ffffff4d;
+    position: absolute;
+    bottom: -60px;
+    left: -400px;
+    transition: .7s ease-in;
+    filter: blur(39px);
+}
+
+.tech-skill-card:hover::before {
+    left: 100%;
+}
+
+.tech-skills-cards:hover>.row-skills>.tech-skill-card:not(:hover) {
+    opacity: .3;
+    filter: blur(2px);
 }
 
 .tech-skill-card.html {
@@ -229,15 +252,6 @@ ul li::before {
         linear-gradient(to right, #787CB4, #1622C0) border-box;
 }
 
-.tech-skills-cards:hover>.row-skills>.tech-skill-card {
-    opacity: .3;
-}
-
-
-.tech-skills-cards:hover>.row-skills>.tech-skill-card:hover {
-    opacity: 1;
-}
-
 .tech-skill-desc {
     line-height: 2rem;
 }
@@ -248,6 +262,64 @@ ul li::before {
 
 .space-between {
     justify-content: space-between;
+}
+
+.experience-cards {
+    margin-top: 40px;
+}
+
+.experience-card {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+}
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.experience-info-position {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--main-pink)
+}
+
+.experience-company-logo {
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.experience-info-company {
+    color: #ffffff80;
+    padding: 5px 10px;
+    border: 1px solid #ffffff80;
+    border-radius: 15px;
+}
+
+.experience-info-desc {
+    line-height: 30px;
+
+}
+
+.company-infos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.company-infos * {
+    
+    margin: 0;
+}
+
+.logo-col::after{
+    content: '';
+    border-left: 5px dotted #ffffff33;
+    flex: 1;
 }
 
 .download-resume-button{

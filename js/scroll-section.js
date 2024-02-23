@@ -32,12 +32,14 @@ const scrollHandlerMenu = () => {
         '.menu-sobre-mim',
         '.menu-tech-skills',
         '.menu-repositorios-do-github',
+        '.menu-experience'
     ];
 
     let sections = [
         '#sobre-mim',
         '#tech-skills',
         '#github-repositories',
+        '#experience'
     ]
 
     menuOptions.forEach((menuOption, index) => {
