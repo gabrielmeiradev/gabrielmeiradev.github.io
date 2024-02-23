@@ -350,6 +350,10 @@ ul li::before {
 }
 
 @media screen and (max-width: 800px) {
+    .experience-card {
+        width: 100%;
+    }
+
     .desktop-only {
         display: none !important;
     }
