@@ -70,7 +70,7 @@ function loadRepos(query){
     projectsQuantityIndicator.innerText = reposFiltered.length;
 
     for(let repo of reposFiltered){
-        if(repo.name == 'gabrielmeiradev.github.io') repo.name = 'Esse portfólio'
+        if(repo.name == 'gabrielmeiradev.github.io') repo.name = 'This website'
         appendRepo(repo.name, repo.description, repo.html_url)                
     }
 }
