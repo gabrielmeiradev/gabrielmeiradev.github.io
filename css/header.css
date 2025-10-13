@@ -1,25 +1,71 @@
-.main-banner{
+.main-banner {
+    display: flex;
+    color: white;
+    align-items: start;
+    flex-direction: column;
+}
+
+.main-banner-container {
     background-image: url('../images/assets/bg-tiles.png');
     background-size: cover;
     padding: 20vh 0;
-    color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    gap: 50px;
     justify-content: center;
     height: 300px;
 }
 
-.welcome{
+.welcome {
     font-weight: 600;
-    margin: 20px;
     font-size: 3rem;
-    text-align: center;
+    text-align: start;
+    margin-bottom: 20px;
 }
 
-.skills-badges{
+.skills-badges {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
+}
+
+.my-photo {
+    background-image: url("https://media.licdn.com/dms/image/v2/D4E03AQE_NtreGI57Jg/profile-displayphoto-shrink_200_200/B4EZeN0vdeHYAY-/0/1750431103953?e=1762992000&v=beta&t=6nM08GXxXUm3z02o1ab2kUD1OU0ucFNq3MZMF08Ho6E");
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+    aspect-ratio: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    .main-banner-container {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    .my-photo {
+        width: 160px;
+        height: 160px;
+        margin-left: 0;
+    }
+
+    .welcome {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .skills-badges {
+        justify-content: center;
+        padding: 0 10px;
+        align-self: center;
+    }
+
 }

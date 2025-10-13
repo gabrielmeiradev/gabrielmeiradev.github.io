@@ -1,8 +1,8 @@
 function getMinDistanceElement(arr) {
     let elements = arr.map(value => (
         (
-        document.querySelector(value).getBoundingClientRect().top + 
-        document.querySelector(value).getBoundingClientRect().bottom
+            document.querySelector(value).getBoundingClientRect().top +
+            document.querySelector(value).getBoundingClientRect().bottom
         ) / 2) - 300);
     let activeElements = elements.filter(value => value > 0);
     return elements.indexOf(Math.min(...activeElements));
@@ -18,14 +18,14 @@ const techCards = [
 ];
 
 const scrollHandlerCards = () => {
-   
+
     techCards.forEach(techCard => {
         document.querySelector(techCard).classList.remove('highlight');
     })
 
     let currentCard = document.querySelector(techCards[getMinDistanceElement(techCards, 150)])
 
-    if(currentCard) currentCard.classList.add('highlight');
+    if (currentCard) currentCard.classList.add('highlight');
 }
 
 let lastElement
@@ -35,6 +35,7 @@ const scrollHandlerMenu = () => {
         '.menu-sobre-mim',
         '.menu-tech-skills',
         '.menu-repositorios-do-github',
+        '.menu-projects',
         '.menu-experience'
     ];
 
@@ -42,17 +43,18 @@ const scrollHandlerMenu = () => {
         '#sobre-mim',
         '#tech-skills',
         '#github-repositories',
+        '#projects',
         '#experience'
     ]
 
-    menuOptions.forEach((menuOption, index) => {
+    menuOptions.forEach((menuOption, _) => {
         document.querySelector(menuOption).classList.remove('active');
     })
 
-    if(lastElement && lastElement.classList.contains('menu-repositorios-do-github')){
+    if (lastElement && lastElement.classList.contains('menu-repositorios-do-github')) {
         lastElement.classList.add('active');
     }
-    
+
     let currentElement = document.querySelector(menuOptions[getMinDistanceElement(sections)]);
     if (currentElement) currentElement.classList.add('active')
 

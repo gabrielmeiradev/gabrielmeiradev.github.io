@@ -68,7 +68,7 @@ section {
     scroll-margin-top: 90px;
 }
 
-#loader{
+#loader {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -82,7 +82,8 @@ section {
     from {
         opacity: 1;
     }
-    to{
+
+    to {
         opacity: 0;
     }
 }
@@ -247,7 +248,7 @@ ul li::before {
         linear-gradient(to right, rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)) border-box;
 }
 
-.tech-skill-card.php {
+.tech-skill-card.flutter {
     background: linear-gradient(#171718, #171718) padding-box,
         linear-gradient(to right, #787CB4, #1622C0) border-box;
 }
@@ -311,17 +312,17 @@ ul li::before {
 }
 
 .company-infos * {
-    
+
     margin: 0;
 }
 
-.logo-col::after{
+.logo-col::after {
     content: '';
     border-left: 5px dotted #ffffff33;
     flex: 1;
 }
 
-.download-resume-button{
+.download-resume-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -378,7 +379,7 @@ ul li::before {
     }
 
     .skill-badge {
-        font-size: .9rem ;
+        font-size: .9rem;
     }
 
     .flex-mobile {
