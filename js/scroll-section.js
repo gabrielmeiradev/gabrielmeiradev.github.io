@@ -13,7 +13,7 @@ const techCards = [
     '.tech-skill-card.css',
     '.tech-skill-card.js',
     '.tech-skill-card.nodejs',
-    '.tech-skill-card.php',
+    '.tech-skill-card.flutter',
     '.tech-skill-card.other'
 ];
 
