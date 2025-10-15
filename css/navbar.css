@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     width: 100vw;
@@ -6,10 +6,13 @@
     position: fixed;
     justify-content: space-between;
     z-index: 1000;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);
+    backdrop-filter: blur(20px);
+    background: linear-gradient(to bottom, rgba(var(--main-black), 0), rgb(var(--main-black)));
+    padding: 20px 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-.effect-blur-navbar{
+.effect-blur-navbar {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,49 +24,50 @@
     z-index: 999;
 }
 
-.menu-desktop{
+.menu-desktop {
     display: flex;
     gap: 30px
 }
 
 
-.menu-mobile{
+.menu-mobile {
     transform: translateX(100%);
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .7);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    z-index: 999;
+    background: rgba(0, 0, 0, .95);
+    backdrop-filter: blur(90px);
+    z-index: 1001;
     flex-direction: column;
     transition: .2s ease;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
-.menu-links{
+.menu-links {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-top: 30vh;
     text-align: center;
 }
 
-.menu-links a{
+.menu-links a {
     color: white;
     text-decoration: none;
     font-size: 2rem;
 }
 
-.close-icon-container{
+.close-icon-container {
     position: absolute;
     top: 32px;
     right: 20px;
     font-size: 1.4rem;
 }
 
-.action-buttons-container.mobile{
+.action-buttons-container.mobile {
     flex-direction: column;
     align-self: center;
     align-items: center;
@@ -71,43 +75,50 @@
     margin-top: 45px;
 }
 
-.action-button{
+.action-button {
     color: var(--main-pink);
     font-size: 1.5rem;
 }
 
-.mobile-icon-menu-container{
+.mobile-icon-menu-container {
     font-size: 1.4rem;
 }
 
-.menu-container a{
+.menu-container a {
     color: rgba(255, 255, 255, .5);
     text-decoration: none;
     transition: .2s ease;
     font-size: 1em;
 }
 
-.menu-container a:hover{
+.menu-container a:hover {
     color: white;
 }
 
-.menu-container a.active{
+.menu-container a.active {
     color: white;
 }
 
-.action-buttons-container{
+.action-buttons-container {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.icon-labeled{
+.icon-labeled {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.icon-labeled p{
+.icon-labeled p {
     color: white;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 20px 30px;
+
+    }
 }
